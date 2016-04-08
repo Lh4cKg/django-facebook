@@ -1,0 +1,26 @@
+{% load static %}
+{% load picture %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facebook Auth</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+	{% if user.first_name|length > 0 %}
+	<p>Facebook First Name: {{user.first_name}} </p>
+	<p>Facebook Last Name: {{user.last_name}} </p>
+	{% else %}
+		<p> wtf </p>
+	{% endif %}
+	<p>Facebook Email: {{user.email}} </p>
+	<p>Facebook ID: {{user.username}} </p>
+	<p>Facebook Profile Image: </p>
+				{% if user.first_name|length > 0 and  user.get_username|floatformat %}
+                    <a href="#" >{% profile_picture user.username %}</a>
+            {% else %}
+            	<p> not dound </p>
+            {% endif %}
+{% endif %}
+</body>
+</html>
