@@ -16,7 +16,7 @@
 	<p>Facebook Email: {{user.email}} </p>
 	<p>Facebook ID: {{user.username}} </p>
 	<p>Facebook Profile Image: </p>
-				{% if user.first_name|length > 0 and  user.get_username|floatformat %}
+				{% if user.first_name|length > 0 %}
                     <a href="#" >{% profile_picture user.username %}</a>
             {% else %}
             	<p> not dound </p>
