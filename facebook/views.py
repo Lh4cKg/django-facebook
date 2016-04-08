@@ -73,7 +73,7 @@ def callback(request):
 
 			user = authenticate(token=_Facebook.access_token, user=user_obj)
 			login(request, user)
-			return HttpResponseRedirect('/facebook/') #('/account/profile/')
+			return HttpResponseRedirect('/account/profile/')
 	return HttpResponse('Welcome to Facebook')
 
 def facebook_login(request):
