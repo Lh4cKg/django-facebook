@@ -129,8 +129,8 @@ INPUT_DATE_FORMATS = [
 
 # Facebook configuration
 
-FACEBOOK_APP_ID = "1666839843562440"
-FACEBOOK_APP_SECRET = "473d6b56341532388fa45f27b89b6a16"
+FACEBOOK_APP_ID = ""
+FACEBOOK_APP_SECRET = ""
 
 FACEBOOK_URL = "http://www.facebook.com/"
 AUTHORIZE_URL = "https://graph.facebook.com/oauth/authorize"
