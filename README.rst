@@ -15,9 +15,10 @@ Setup:
 
 * Add 'facebook' app in your Django project.
 * Add facebook app to INSTALLED_APPS in settings.py: ``'facebook'``.
-* Add project configuration in settings.py
-	# Facebook configuration
+* Add project configuration in settings.py::
 
+	# Facebook configuration
+	
 	FACEBOOK_APP_ID = "" # your app id
 
 	FACEBOOK_APP_SECRET = "" # your app secret
