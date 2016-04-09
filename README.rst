@@ -1,4 +1,6 @@
+==================
 # django-facebook
+==================
 Simple Django Facebook Authentication/Registration for Python 3, It uses the standard authentication build into Django.
 
 Installation Requirements
