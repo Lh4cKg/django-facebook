@@ -84,3 +84,21 @@ To use the template tag to view the current user profile image, add the followin
 
 	{% endif %}
 
+Source Code
+-----------------
+
+The source code can be found on github_.
+
+Contributing
+-----------------
+
+There are plenty of ways to contribute to this project. If you think you’ve found a bug please submit an issue_.
+
+License
+------------------
+
+``facebook`` package is distributed under MIT license_. 
+
+.. _github: https://github.com/Lh4cKg/django-facebook/tree/master/facebook
+.. _issue: https://github.com/Lh4cKg/django-facebook/issues
+.. _license: https://github.com/Lh4cKg/django-facebook/blob/master/LICENSE
