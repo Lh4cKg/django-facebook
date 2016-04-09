@@ -43,7 +43,6 @@ Setup:
 
 	AUTHENTICATION_BACKENDS = (
 	    'django.contrib.auth.backends.ModelBackend',
-
 	    'facebook.backend.FacebookBackend',
 	)
 		
