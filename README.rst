@@ -45,11 +45,11 @@ Setup
 	$ python manage.py makemigrations
 	$ python manage.py migrate
 	$ python manage.py runserver
-	
+
 	# check it ``localhost:8000`` in your browser
 * For registration and authentication, go to the following link::
-
-	 ``localhost:8000/facebook/facebook_login``
+	
+	localhost:8000/facebook/facebook_login
 	
 
 Example
@@ -75,5 +75,14 @@ create a migration and run server::
 check it ``localhost:8000`` in your browser
 for registration and authentication, go to the following link ``localhost:8000/facebook/facebook_login``
 
+Template Tags
+-----------------------------------
+To use the template tag to view the current user profile image, add the following line to a template::
 
+	{% load pictures %}
+	{% if user.is_authenticated %}
+
+		{% profile_picture user.facebook_id %} {# or {% profile_picture user.username %} #}
+
+	{% endif %}
 
