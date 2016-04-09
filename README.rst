@@ -79,7 +79,7 @@ Template Tags
 -----------------------------------
 To use the template tag to view the current user profile image, add the following line to a template::
 
-	{% load pictures %}
+	{% load picture %}
 	{% if user.is_authenticated %}
 
 		{% profile_picture user.facebook_id %} {# or {% profile_picture user.username %} #}
