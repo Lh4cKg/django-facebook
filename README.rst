@@ -52,7 +52,7 @@ To install the source ``facebook`` package::
 	installing requirements packages
 	$ pip install -r requirements.txt
 
-Usage:
+Usage::
 --------
 
 	create a migration and run server
