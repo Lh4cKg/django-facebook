@@ -28,3 +28,6 @@ Usage::
 	$ python manage.py runserver
 check it ``localhost:8000`` in your browser
 for registration and authentication, go to the following link ``localhost:8000/facebook/facebook_login``
+
+Setup::
+
