@@ -35,19 +35,28 @@ Setup
 	    'django.contrib.auth.backends.ModelBackend',
 	    'facebook.backend.FacebookBackend',
 	)
-		
+* Add this line to the urlpatterns in urls.py::
+	
+	urlpatterns = [
+			url(r'^facebook/', include('facebook.urls',namespace='facebook')),
+	]
+* Create a migration and run server::
+	
+	$ python manage.py makemigrations
+	$ python manage.py migrate
+	$ python manage.py runserver
 	
 
 Example
 ---------------------------------
-To install the source ``facebook`` package::
+To install the source ``facebook`` package from example project::
 	
 	create a virtual environment and activate it	
 	$ virtualenv --python=python3 --no-site-packages myenv
 	$ cd myenv && source bin/activate 
 	cloning django-facebook
 	$ git clone https://github.com/Lh4cKg/django-facebook.git
-	$ cd dajngo_facebook
+	$ cd example/dajngo_facebook
 	installing requirements packages
 	$ pip install -r requirements.txt
 
