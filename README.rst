@@ -10,7 +10,7 @@ Installation Requirements
 * Requests 
 * Simplejson
 
-Setup:
+Setup
 -----------------------------
 * Add 'facebook' app in your Django project.
 * Add facebook app to INSTALLED_APPS in settings.py: ``'facebook'``.
@@ -53,8 +53,8 @@ To install the source ``facebook`` package::
 
 Usage::
 ---------------------------------
+create a migration and run server
 
-	create a migration and run server
 	$ python manage.py migrate
 	$ python manage.py runserver
 
