@@ -10,7 +10,7 @@ Installation Requirements
 * Requests 
 * Simplejson
 
-Setup::
+Setup:
 --------
 
 * Add 'facebook' app in your Django project.
@@ -38,7 +38,7 @@ Setup::
 		
 	
 
-Example::
+Example:
 ----------
 To install the source ``facebook`` package::
 	
@@ -51,12 +51,13 @@ To install the source ``facebook`` package::
 	installing requirements packages
 	$ pip install -r requirements.txt
 
-Usage::
+Usage:
 --------
 
 	create a migration and run server
 	$ python manage.py migrate
 	$ python manage.py runserver
+	
 check it ``localhost:8000`` in your browser
 for registration and authentication, go to the following link ``localhost:8000/facebook/facebook_login``
 
