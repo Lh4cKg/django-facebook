@@ -20,23 +20,14 @@ Setup:
 	# Facebook configuration
 	
 	FACEBOOK_APP_ID = "" # your app id
-
 	FACEBOOK_APP_SECRET = "" # your app secret
-
-	FACEBOOK_URL = "http://www.facebook.com/"
-	
-	AUTHORIZE_URL = "https://graph.facebook.com/oauth/authorize"
-	
-	ACCESS_TOKEN_URL = "https://graph.facebook.com/oauth/access_token"
-	
-	API_URL = "https://graph.facebook.com/v2.5/"
-	
-	REQUEST_PERMISSIONS_URL = "https://www.facebook.com/dialog/oauth?"
-	
-	GRAPH_ME_URL = "https://graph.facebook.com/v2.5/me"
-	
-	FACEBOOK_SCOPE = ["email","user_birthday"] # publish_stream
-	
+	FACEBOOK_URL = "http://www.facebook.com/"	
+	AUTHORIZE_URL = "https://graph.facebook.com/oauth/authorize"	
+	ACCESS_TOKEN_URL = "https://graph.facebook.com/oauth/access_token"	
+	API_URL = "https://graph.facebook.com/v2.5/"	
+	REQUEST_PERMISSIONS_URL = "https://www.facebook.com/dialog/oauth?"	
+	GRAPH_ME_URL = "https://graph.facebook.com/v2.5/me"	
+	FACEBOOK_SCOPE = ["email","user_birthday"] # publish_stream	
 	CALLBACK_URL = "http://localhost:8000/callback/"
 
 	# Auth backends
