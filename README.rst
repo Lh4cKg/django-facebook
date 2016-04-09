@@ -14,7 +14,7 @@ Setup
 -----------------------------
 * Add 'facebook' app in your Django project
 * Add facebook app to INSTALLED_APPS in settings.py: ``'facebook'``
-* Add project configuration in settings.py::
+* Add project facebook configuration in settings.py::
 
 	# Facebook configuration
 	
@@ -61,7 +61,7 @@ To install the source ``facebook`` package from example project::
 	$ cd myenv && source bin/activate 
 	cloning django-facebook
 	$ git clone https://github.com/Lh4cKg/django-facebook.git
-	$ cd example/dajngo_facebook
+	$ cd example
 	installing requirements packages
 	$ pip install -r requirements.txt
 
