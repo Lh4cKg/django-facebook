@@ -38,7 +38,7 @@ Setup
 		
 	
 
-Example:
+Example
 ---------------------------------
 To install the source ``facebook`` package::
 	
@@ -51,9 +51,9 @@ To install the source ``facebook`` package::
 	installing requirements packages
 	$ pip install -r requirements.txt
 
-Usage::
+Usage
 ---------------------------------
-create a migration and run server
+create a migration and run server::
 
 	$ python manage.py migrate
 	$ python manage.py runserver
