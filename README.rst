@@ -14,12 +14,13 @@ Setup:
 --------
 
 * Add 'facebook' app in your Django project.
+* Add facebook app to INSTALLED_APPS in settings.py: `'facebook'`,
 * Add project configuration in settings.py
 	# Facebook configuration
 
-	FACEBOOK_APP_ID = ""
+	FACEBOOK_APP_ID = "" # your app id
 
-	FACEBOOK_APP_SECRET = ""
+	FACEBOOK_APP_SECRET = "" # your app secret
 
 	FACEBOOK_URL = "http://www.facebook.com/"
 	
@@ -41,6 +42,7 @@ Setup:
 
 	AUTHENTICATION_BACKENDS = (
 	    'django.contrib.auth.backends.ModelBackend',
+
 	    'facebook.backend.FacebookBackend',
 	)
 		
