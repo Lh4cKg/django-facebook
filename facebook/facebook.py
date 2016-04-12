@@ -13,6 +13,8 @@ from django.conf import settings
 # https://developers.facebook.com/docs/apps/changelog#v2_5
 # https://developers.facebook.com/docs/graph-api/reference/v2.5/user
 # https://developers.facebook.com/docs/facebook-login/permissions
+# https://developers.facebook.com/docs/facebook-login/reauthentication
+# https://developers.facebook.com/docs/facebook-login/access-tokens
 
 class FacebookAuth(object):
     access_token = None
@@ -43,7 +45,7 @@ class FacebookAuth(object):
     def _authorize_url(self):
         _kvp_hash = {'redirect_uri': self.callback_url,
                         'client_id': self.client_id,
-                        'scope': self.scope_list}
+                        'scopes': self.scope_list}
         params = self._urlencode(_kvp_hash)
         return self.authorize_url + '?' + params
 
