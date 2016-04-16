@@ -43,15 +43,16 @@ class FacebookAuth(object):
     def _authorize_url(self):
         _kvp_hash = {'redirect_uri': self.callback_url,
                         'client_id': self.client_id,
-                        'scope': self.scope_list}
+                        'scopes': self.scope_list}
         params = self._urlencode(_kvp_hash)
         return self.authorize_url + '?' + params
 
     def _access_token(self, code):
         _kvp_hash = {'code': code,
-                        'redirect_uri': self.callback_url,
-                        'client_secret': self.client_secret,
-                        'client_id': self.client_id}
+                    'redirect_uri': self.callback_url,
+                    'client_secret': self.client_secret,
+                    'client_id': self.client_id}
+                    # 'grant_type': 'client_credentials'}
         params = parse.urlencode(_kvp_hash)
         response = rq.get(self.access_token_url + '?' + params)
         if response.status_code != 200:
@@ -60,9 +61,17 @@ class FacebookAuth(object):
         response_array = str(response.text).split('&')
         self.access_token = str(response_array[0][13:])
 
+    # def get_access_token(app_id, app_secret):           
+    #     _kvp_hash = {'grant_type': 'client_credentials', 
+    #                 'client_id': app_id, 
+    #                 'client_secret': app_secret}
+    #     response = rq.post('https://graph.facebook.com/oauth/access_token?', params=_kvp_hash)
+    #     result = response.text.split("=")[1]
+    #     return result
+
     def _user_info(self):
-        response = rq.get("{u}?fields=id,email,first_name,last_name,birthday,gender,picture&access_token={at}"\
-                                .format(u=self.graph_me_url,at=self.access_token))
+        # import ipdb; ipdb.set_trace()
+        response = rq.get("{u}?fields=id,email,first_name,last_name,birthday,gender,picture&access_token={at}".format(u=self.graph_me_url,at=self.access_token))
         if response.status_code != 200:
             raise (Exception('Invalid response,response code: {e}'.format(e=response.status_code)))
 

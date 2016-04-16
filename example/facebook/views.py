@@ -23,7 +23,6 @@ def home(request):
 	return render_to_response('base.html',c,rc)
 
 def callback(request):
-	# import ipdb; ipdb.set_trace()
 	if request.user.is_authenticated():
 		return HttpResponseRedirect('/account/profile/')
 	if not request.user.is_active:
